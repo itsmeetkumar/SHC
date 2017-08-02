@@ -1,0 +1,6 @@
+Dynamic chemist ID
+DNS
+Chatbot
+Push notification regarding blood bank
+Chemist medicine suggestion for patient view
+Textarea in Address and medicine description
