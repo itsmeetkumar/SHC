@@ -9,6 +9,13 @@ class Chemist extends CI_Controller {
 		$this->load->view('chemist/dashboard');
 		$this->load->view('chemist/footer');	
 	}
+	public function dashboard()
+	{
+		$this->load->view('chemist/header');
+		$this->load->view('chemist/dashboard');
+		$this->load->view('chemist/footer');	
+		
+	}
 	public function chemist_1()
 	{
 		# code...
