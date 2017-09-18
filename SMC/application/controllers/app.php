@@ -15,6 +15,7 @@ class App extends CI_Controller {
 		$this->load->view('app/in_app');
 		$this->load->view('app/h1/footer');
 	}
+	//blood bank function
 	public function bb()
 	{
 		# code...
@@ -23,6 +24,7 @@ class App extends CI_Controller {
 		$this->load->view('app/h1/bb');
 		$this->load->view('app/h1/footer');
 	}
+	//blood presure function
 	public function bp()
 	{
 		# code...
@@ -32,6 +34,7 @@ class App extends CI_Controller {
 		$this->load->view('app/h1/footer');
 
 	}
+	//temp health tracker function
 	public function temp()
 	{
 		# code...
@@ -40,6 +43,7 @@ class App extends CI_Controller {
 		$this->load->view('app/h1/temp');
 		$this->load->view('app/h1/footer');
 	}
+	//health tracker gluc function
 	public function gluc()
 	{
 		$this->load->library('session');
@@ -47,6 +51,7 @@ class App extends CI_Controller {
 		$this->load->view('app/h1/gluc');
 		$this->load->view('app/h1/footer');
 	}
+	//smart card view 
 	public function smartcard()
 	{
 		# code...
@@ -55,6 +60,7 @@ class App extends CI_Controller {
 		$this->load->view('app/h1/smarcard');
 		$this->load->view('app/h1/footer');
 	}
+	//timeline function for patient app
 	public function timeline()
 	{
 		# code...
@@ -87,6 +93,7 @@ class App extends CI_Controller {
 		$this->load->view('bloodbank/bloodbank');
 		$this->load->view('app/h1/footer');
 	}
+	//bill module function 
 	public function bill()
 	{
 		# code...
@@ -95,6 +102,7 @@ class App extends CI_Controller {
 		$this->load->view('app/bill');
 		$this->load->view('app/h1/footer');
 	}
+	//chemist module function for app
 	public function chemist()
 	{
 		$this->load->library('session');
@@ -102,6 +110,7 @@ class App extends CI_Controller {
 		$this->load->view('app/h1/chemist');
 		$this->load->view('app/h1/footer');
 	}
+	//appointment module function for app
 	public function appointment()
 	{
 		# code...
@@ -110,6 +119,7 @@ class App extends CI_Controller {
 		$this->load->view('app/h1/appointment');
 		$this->load->view('app/h1/footer');
 	}
+	//medication for patient 
 	public function medications()
 	{
 		# code...
@@ -118,6 +128,7 @@ class App extends CI_Controller {
 		$this->load->view('app/medications/medication');
 		$this->load->view('app/h1/footer');
 	}
+
 	public function in_gluc()
 	{
 		$this->load->library('session');
@@ -185,7 +196,7 @@ class App extends CI_Controller {
 		$this->load->library('session');
 		if (isset($this->session->userdata['logged_in'])) {
 		$username = ($this->session->userdata['logged_in']['r_number']);
-//$email = ($this->session->userdata['logged_in']['email']);
+		//$email = ($this->session->userdata['logged_in']['email']);
 
 		$this->form_validation->set_rules('bp', 'bp', 'required');
 
@@ -211,10 +222,12 @@ class App extends CI_Controller {
 		}
 	}
 	}
+	//login view function
 	public function login()
 	{
 		$this->load->view('app/login');
 	}
+	//logout function for patient application
 	public function logout() {
 		$this->load->library('session');
 // Removing session data
